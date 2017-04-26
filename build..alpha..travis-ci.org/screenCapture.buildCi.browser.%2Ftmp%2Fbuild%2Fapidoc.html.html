@@ -101,15 +101,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.passport-bnet.toString">
-            function <span class="apidocSignatureSpan">passport-bnet.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">passport-bnet.</span>Strategy.prototype</span>
 
         </li>
@@ -496,21 +487,6 @@
 
 
 
-    <h2>
-        <a href="#apidoc.element.passport-bnet.toString" id="apidoc.element.passport-bnet.toString">
-        function <span class="apidocSignatureSpan">passport-bnet.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
 
 
 
@@ -634,7 +610,23 @@
     return done(null, profile);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *
+ * @param {String} accessToken
+ * @param {Function} done
+ * @api protected
+ */
+Strategy.prototype.userProfile = function(accessToken, done) {
+  var strategy = this;
+  return strategy.<span class="apidocCodeKeywordSpan">getProfile</span>(accessToken, done);
+};
+
+Strategy.prototype.getProfile = function(accessToken, done) {
+  this._oauth2.get(this._profileUrl, accessToken, function (err, body, res) {
+var json;
+
+if (err) {
+...</pre></li>
     </ul>
 
 
