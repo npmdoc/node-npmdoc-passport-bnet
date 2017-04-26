@@ -1,6 +1,6 @@
 # npmdoc-passport-bnet
 
-#### api documentation for  [passport-bnet (v1.2.1)](https://github.com/Blizzard/passport-bnet#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-passport-bnet.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-passport-bnet) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-passport-bnet.svg)](https://travis-ci.org/npmdoc/node-npmdoc-passport-bnet)
+#### basic api documentation for  [passport-bnet (v1.2.1)](https://github.com/Blizzard/passport-bnet#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-passport-bnet.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-passport-bnet) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-passport-bnet.svg)](https://travis-ci.org/npmdoc/node-npmdoc-passport-bnet)
 
 #### Bnet authentication strategy for Passport.
 
@@ -79,7 +79,8 @@
     "scripts": {
         "test": "mocha test/**/*.js"
     },
-    "version": "1.2.1"
+    "version": "1.2.1",
+    "bin": {}
 }
 ```
 
